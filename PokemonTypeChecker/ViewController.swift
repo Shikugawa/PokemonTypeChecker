@@ -24,6 +24,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view, typically from a nib.
         attackView.dataSource = self
         attackView.delegate = self
+        enemyTypeView.dataSource = self
+        enemyTypeView.delegate = self
+        enemyTypeView2.dataSource = self
+        enemyTypeView2.delegate = self
     }
     
 
@@ -229,25 +233,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    @IBAction func typeEvalButton(_ sender: Any) {
+    @IBAction func evalAction(_ sender: Any) {
         result.text = typeEval()
     }
     
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ attackView :UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pokemonTypeArray.count
-    }
-    
-    func pickerView(namePickerview: UIPickerView, titleForRow row: Int, forComponent component: Int)-> String! {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pokemonTypeArray[row]
     }
     
-    func pickerView(namePickerview: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        aType = pokemonTypeArray[row]
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pokemonTypeArray.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0{
+            aType = pokemonTypeArray[row]
+        }else if pickerView.tag == 1{
+            eType1 = pokemonTypeArray[row]
+        }else {
+            eType2 = pokemonTypeArray[row]
+        }
+    }
 }
 

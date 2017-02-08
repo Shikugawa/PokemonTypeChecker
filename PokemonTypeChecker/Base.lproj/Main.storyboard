@@ -49,15 +49,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6K-6F-zbJ">
-                                <rect key="frame" x="305" y="81" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="判定"/>
-                                <connections>
-                                    <action selector="typeEval:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kso-u9-WqD"/>
-                                    <action selector="typeEvalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFM-EX-liV"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-eY-acc">
                                 <rect key="frame" x="0.0" y="169" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -70,6 +61,14 @@
                                 <rect key="frame" x="0.0" y="443" width="175" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwb-mF-F48">
+                                <rect key="frame" x="286" y="81" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="評価"/>
+                                <connections>
+                                    <action selector="evalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nT9-OV-uod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
